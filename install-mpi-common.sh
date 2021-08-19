@@ -33,10 +33,10 @@ OSU_BM_SRC=https://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchma
 
 # Install the MPI Hello World source
 echo "Adding MPI Hello World..."
-mkdir /opt/mpi-common/helloworld && cd /opt/mpi-common/helloworld
+mkdir -p /opt/mpi-common/helloworld && cd /opt/mpi-common/helloworld
 git clone https://github.com/mpitutorial/mpitutorial
 
 # Install the OSU MPI benchmarks
 echo "Adding the OSU Micro-Benchmarks"
-mkdir /opt/mpi-common/osu-benchmarks && cd /opt/mpi-common/osu-benchmarks
+mkdir -p /opt/mpi-common/osu-benchmarks && cd /opt/mpi-common/osu-benchmarks
 wget $OSU_BM_SRC
