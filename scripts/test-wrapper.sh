@@ -21,4 +21,3 @@ make
 
 # compile the benchmarks
 OSU_BM_SRC=https://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-5.7.1.tgz
-
