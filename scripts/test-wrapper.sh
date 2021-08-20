@@ -8,7 +8,6 @@ fi_info
 ucx_info
 ompi_info
 
-
 # compile the helloworld script
 mkdir /tmp/helloworld && cd /tmp/helloworld
 git clone https://github.com/mpitutorial/mpitutorial
