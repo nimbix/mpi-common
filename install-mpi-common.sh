@@ -29,14 +29,21 @@
 # policies, either expressed or implied, of Nimbix, Inc.
 #
 
+MPI_COMMON=/usr/local/mpi-common
 OSU_BM_SRC=https://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-5.7.1.tgz
 
-# Install the MPI Hello World source
+# Install the MPI Tutorials with Hello World source
 echo "Adding MPI Hello World..."
-mkdir -p /opt/mpi-common/helloworld && cd /opt/mpi-common/helloworld
+mkdir -p $MPI_COMMON && cd $MPI_COMMON
 git clone https://github.com/mpitutorial/mpitutorial
 
 # Install the OSU MPI benchmarks
 echo "Adding the OSU Micro-Benchmarks"
-mkdir -p /opt/mpi-common/osu-benchmarks && cd /opt/mpi-common/osu-benchmarks
+mkdir -p $MPI_COMMON/osu-benchmarks && cd $MPI_COMMON/osu-benchmarks
 wget $OSU_BM_SRC
+
+# Make the whole dir usable by the job users
+chmod -R a+w $MPI_COMMON
+
+# Add compilers wrappers for Open MPI distributions
+sudo yum install -y openmpi-devel openmpi3-devel
