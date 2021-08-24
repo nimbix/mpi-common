@@ -32,6 +32,9 @@
 MPI_COMMON=/usr/local/mpi-common
 OSU_BM_SRC=https://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-5.7.1.tgz
 
+# Add compilers wrappers for Open MPI distributions
+sudo yum install -y gcc g++ make openmpi-devel openmpi3-devel
+
 # Install the MPI Tutorials with Hello World source
 echo "Adding MPI Hello World..."
 mkdir -p $MPI_COMMON && cd $MPI_COMMON
@@ -41,9 +44,11 @@ git clone https://github.com/mpitutorial/mpitutorial
 echo "Adding the OSU Micro-Benchmarks"
 mkdir -p $MPI_COMMON/osu-benchmarks && cd $MPI_COMMON/osu-benchmarks
 curl -H 'Cache-Control: no-cache' $OSU_BM_SRC | tar xfz - --strip-components=1
+make
+make install
 
 # Make the whole dir usable by the job users
 chmod -R a+w $MPI_COMMON
 
 # Add compilers wrappers for Open MPI distributions
-sudo yum install -y openmpi-devel openmpi3-devel
+#sudo yum install -y openmpi-devel openmpi3-devel
