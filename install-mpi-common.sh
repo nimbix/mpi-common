@@ -40,7 +40,7 @@ git clone https://github.com/mpitutorial/mpitutorial
 # Install the OSU MPI benchmarks
 echo "Adding the OSU Micro-Benchmarks"
 mkdir -p $MPI_COMMON/osu-benchmarks && cd $MPI_COMMON/osu-benchmarks
-wget $OSU_BM_SRC
+curl -H 'Cache-Control: no-cache' $OSU_BM_SRC | tar xfz - --strip-components=1
 
 # Make the whole dir usable by the job users
 chmod -R a+w $MPI_COMMON
