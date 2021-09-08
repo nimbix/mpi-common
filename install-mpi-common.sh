@@ -32,9 +32,6 @@
 MPI_COMMON=/usr/local/mpi-common
 OSU_BM_SRC=https://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-5.7.1.tgz
 
-# Add compilers wrappers for Open MPI distributions
-yum install -y openmpi-devel openmpi3-devel
-
 # Install the MPI Tutorials with Hello World source
 echo "Adding MPI Hello World..."
 mkdir -p $MPI_COMMON && cd $MPI_COMMON
