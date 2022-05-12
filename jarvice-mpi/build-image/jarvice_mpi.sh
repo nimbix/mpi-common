@@ -1,0 +1,6 @@
+JARVICE_FOLDER=/opt/JARVICE
+export PATH=$JARVICE_FOLDER/openmpi/bin/:$JARVICE_FOLDER/bin/:$PATH
+export LD_LIBRARY_PATH=$JARVICE_FOLDER/openmpi/lib/:$JARVICE_FOLDER/lib/:$LD_LIBRARY_PATH
+export CPATH=$JARVICE_FOLDER/openmpi/include/:$JARVICE_FOLDER/include/:$CPATH
+export MPI_HOME=$JARVICE_FOLDER/openmpi/
+export MPI_RUN=$JARVICE_FOLDER/openmpi/bin/mpirun
