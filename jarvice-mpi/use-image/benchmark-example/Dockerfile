@@ -18,7 +18,7 @@ RUN bash -c 'git clone https://github.com/intel/mpi-benchmarks.git; cd mpi-bench
 
 RUN bash -c 'wget http://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-5.9.tar.gz; \
     tar xvzf osu-micro-benchmarks-5.9.tar.gz; cd osu-micro-benchmarks-5.9; source /opt/JARVICE/jarvice_mpi.sh; \
-    ./configure CC=mpicc CXX=mpixx --prefix=/osu/; make && make install;'
+    ./configure CC=mpicc CXX=mpicxx --prefix=/osu/; make && make install;'
 
 # Create final image from Ubuntu
 FROM ubuntu:latest
