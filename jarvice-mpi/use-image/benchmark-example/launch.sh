@@ -70,11 +70,11 @@ echo "################# IMB-MPI #####################################"
 echo "###############################################################"
 /opt/JARVICE/openmpi/bin/mpirun -x PATH -x LD_LIBRARY_PATH -np $CORES --hostfile /etc/JARVICE/cores /IMB-MPI1
 echo "###############################################################"
-echo "################# OSU latency #################################"
+echo "################# OSU bandwith ################################"
 echo "###############################################################"
 /opt/JARVICE/openmpi/bin/mpirun -x PATH -x LD_LIBRARY_PATH -np $NBNODES -N 1 --hostfile /etc/JARVICE/cores /osu_bw
 echo "###############################################################"
-echo "################# OSU bandwith ################################"
+echo "################# OSU latency #################################"
 echo "###############################################################"
 /opt/JARVICE/openmpi/bin/mpirun -x PATH -x LD_LIBRARY_PATH -np $NBNODES -N 1 --hostfile /etc/JARVICE/cores /osu_latency
 set +x
