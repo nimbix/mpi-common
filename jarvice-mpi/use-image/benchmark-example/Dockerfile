@@ -43,4 +43,3 @@ RUN chmod +x /launch.sh;
 
 # Integrate AppDef file
 COPY NAE/AppDef.json /etc/NAE/AppDef.json
-
