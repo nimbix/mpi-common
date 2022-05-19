@@ -1,0 +1,32 @@
+{
+    "name": "MPI TEST",
+    "description": "MPI TEST",
+    "author": "Me",
+    "licensed": true,
+    "classifications": [
+      "Unclassified"
+    ],
+    "machines": [
+      "*"
+    ],
+    "vault-types": [
+          "FILE",
+          "BLOCK",
+          "BLOCK_ARRAY",
+          "OBJECT"
+    ],
+    "commands": {
+      "run_mpi": {
+        "path": "/launch.sh",
+        "interactive": true,
+        "name": "MPI TEST",
+        "description": "MPI TEST",
+        "parameters": {}
+        }
+    },
+    "image": {
+      "type": "image/png",
+      "data": ""
+    }
+  }
+  
