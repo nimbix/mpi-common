@@ -3,7 +3,6 @@
 This repositories contains:
 
 * Setup common files needed for testing and reporting for MPI fabrics and providers
-* Jarvice MPI image generation tools and instructions
 * Instructions on how to simply use Jarvice MPI and benchmark current cluster MPI performances
 
 ## mpi-common testing scripts
@@ -19,14 +18,6 @@ https://mpitutorial.com/tutorials/mpi-hello-world
 
 * Open MPI
 * Intel MPI
-
-## Jarvice MPI image building
-
-The content of jarvice-mpi/build-image allows to build jarvice_mpi image from 
-jarvice init image. jarvice_mpi should be make public so users can use it to 
-build their MPI applications.
-
-See jarvice-mpi/build-image/README.md for basic instructions. 
 
 ## Jarvice MPI benchmarks
 

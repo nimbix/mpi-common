@@ -1,5 +1,5 @@
 # Load jarvice_mpi image as JARVICE_MPI
-FROM us-docker.pkg.dev/jarvice-system/images/jarvice_mpi:4.1 as JARVICE_MPI
+FROM us-docker.pkg.dev/jarvice/images/jarvice_mpi:4.1 as JARVICE_MPI
 
 # Multistage to optimise, as image does not need to contain jarvice_mpi 
 # components, these are side loaded during job containers init.
